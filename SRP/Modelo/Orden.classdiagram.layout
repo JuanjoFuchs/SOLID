@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UMLClassDiagram1">
+  <logicalClassDesignerModelMoniker Id="c712b791-f0b3-484c-87fa-8705232557e6" />
+  <nestedChildShapes>
+    <classShape Id="aafa06b2-c7b9-4983-bf52-1e0d4a70f00e" absoluteBounds="5, 3, 1.75, 1.5429687152306237" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="6a58c409-5cf5-4fc7-9d02-02de8cafc312" LastKnownName="Orden" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="f023546b-713b-46d5-aa26-e3b87066c8b6" absoluteBounds="5.015, 3.39, 1.7200000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="df8fdfd3-3293-450e-9a71-0000218c5a9f" absoluteBounds="5.015, 3.6011718675494193, 1.7200000000000002, 0.84179684768120444" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <packageShape Id="7ede3c01-46db-4214-8e18-d2437614981d" absoluteBounds="6.25, 1.5, 1.5, 1" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="0520e1d9-48e1-4862-a24c-875bbd0397b3" LastKnownName="Cajero" />
+    </packageShape>
+    <dependencyConnector edgePoints="[(6.5 : 2.5); (6.5 : 3)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="3420e28d-49ef-470c-a6bb-1be5732ed5c7" />
+      <relativeChildShapes />
+      <nodes>
+        <packageShapeMoniker Id="7ede3c01-46db-4214-8e18-d2437614981d" />
+        <classShapeMoniker Id="aafa06b2-c7b9-4983-bf52-1e0d4a70f00e" />
+      </nodes>
+    </dependencyConnector>
+    <packageShape Id="68ad9968-3fcd-437d-af4c-f702a9727cab" absoluteBounds="3.75, 1.5, 1.75, 1" customColor="255, 249, 230" hideQualifiedName="false">
+      <packageMoniker Id="cb95ea19-a665-4ccb-b1dc-036de253b0b2" LastKnownName="Página Web" />
+    </packageShape>
+    <dependencyConnector edgePoints="[(5.25 : 2.5); (5.25 : 3)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <dependencyMoniker Id="2e0899d2-3ea0-46fe-adf6-715fe41e887d" />
+      <relativeChildShapes />
+      <nodes>
+        <packageShapeMoniker Id="68ad9968-3fcd-437d-af4c-f702a9727cab" />
+        <classShapeMoniker Id="aafa06b2-c7b9-4983-bf52-1e0d4a70f00e" />
+      </nodes>
+    </dependencyConnector>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>

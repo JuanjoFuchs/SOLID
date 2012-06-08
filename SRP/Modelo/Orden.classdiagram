@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="c712b791-f0b3-484c-87fa-8705232557e6" name="Orden Muchas Responsabilidades" linkedPackageId="3c1a86e8-c3eb-47e7-a2ca-b63c915f75c6" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="911e9605-b977-40c1-a35c-7d26bded60ed">
+      <profileInstance Id="8ef55a4f-97af-4d01-a64b-70bd21f87333" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="8fde407d-434e-46aa-bd83-0f8a974790ad">
+      <profileInstance Id="60fd0609-6f84-4ce4-bb10-3f84ca12c950" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6a58c409-5cf5-4fc7-9d02-02de8cafc312" name="Orden" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0043f2d2-8dea-413b-b248-6e718cd0fb28" />
+        <ownedOperationsInternal>
+          <operation Id="874d335b-8b01-4295-b14b-cc9f450b22d1" name="CargarTarjetaDeCredito" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="41e7213c-e8b7-4184-9ab8-b1f82f8908a0" />
+          </operation>
+          <operation Id="c5ebb6cf-63cd-4da8-ba88-31b61c71c35a" name="ConfirmarCompra" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="cce1b27e-ad89-44da-9537-9803ae6cd36f" />
+          </operation>
+          <operation Id="6833dd40-614b-4728-8509-88df7b91c0b1" name="NotificarCliente" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b1edfa76-5a24-4dbe-892b-ef93405a955f" />
+          </operation>
+          <operation Id="da01ba56-1348-4f8e-9d3c-b855de61de4c" name="ReservarInventario" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fd352ec5-0542-446d-9d6b-56c7fd7bc33b" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="0520e1d9-48e1-4862-a24c-875bbd0397b3" name="Cajero">
+        <elementDefinition Id="a6b46357-ae8c-495e-b4f3-34a3415c656e" />
+        <suppliersInternal>
+          <dependency Id="3420e28d-49ef-470c-a6bb-1be5732ed5c7">
+            <classMoniker Id="6a58c409-5cf5-4fc7-9d02-02de8cafc312" LastKnownName="Orden" />
+            <elementDefinition Id="760d92a5-c7e3-4a49-97b4-1b60df0911f1" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="cb95ea19-a665-4ccb-b1dc-036de253b0b2" name="Página Web">
+        <elementDefinition Id="d85f0203-8fb0-442f-9b58-4620f33ee7b4" />
+        <suppliersInternal>
+          <dependency Id="2e0899d2-3ea0-46fe-adf6-715fe41e887d">
+            <classMoniker Id="6a58c409-5cf5-4fc7-9d02-02de8cafc312" LastKnownName="Orden" />
+            <elementDefinition Id="af8cdbe9-a459-4551-8149-9481edf16fd8" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="3c1a86e8-c3eb-47e7-a2ca-b63c915f75c6" name="Modelo">
+    <elementDefinition Id="e391b33d-4188-4325-85f8-20ea7c5553cd" />
+  </package>
+</logicalClassDesignerModel>

@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="c76151c7-9295-48cf-b3f1-59cdacba3aa3"
+  name="Modelo" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="81f9fe8b-5b94-4c21-b249-607a8b4cc9d5"
+        name="Orden"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="c99819f2-d27c-452e-8c06-f571f4763137"
+            name="Carrito"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="fb42c528-cc30-4f7e-b882-0469b1513e46"
+            name="ConfirmarCompra"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b9bd986f-0024-4d8b-878c-6e077e1f3e5b"
+        name="OrdenWeb"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="748e406b-e331-422c-a70a-b84cdb16acf6">
+            <interfaceMoniker
+              Id="e2aa77c1-4e7f-44f3-af9d-5db5929b948c"
+              LastKnownName="IServicioNotificacion"
+              LastKnownLocation="Modelo.uml" />
+          </dependency>
+          <dependency
+            Id="2b1049b0-21dc-4b25-b442-9917b8ead5a3">
+            <interfaceMoniker
+              Id="eb228515-5132-4627-80f1-3a25397ab26c"
+              LastKnownName="IReservaInventarios"
+              LastKnownLocation="Modelo.uml" />
+          </dependency>
+          <dependency
+            Id="edb3b73f-fa2f-41b3-a3a3-c15b45b64d8d">
+            <interfaceMoniker
+              Id="2939bb9f-a136-49de-a8ca-8c06c4b37eeb"
+              LastKnownName="IServicioPagos"
+              LastKnownLocation="Modelo.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="4861c254-b2c2-4cb4-98dc-c6640414c0a6"
+            isSubstitutable="false">
+            <classMoniker
+              Id="81f9fe8b-5b94-4c21-b249-607a8b4cc9d5"
+              LastKnownName="Orden"
+              LastKnownLocation="Modelo.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="264fe671-793f-416f-943e-8c75b4413b3d"
+            name="ConfirmarCompra"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="808147f3-b7a0-4daa-bb3a-11b60c8c6915"
+        name="OrdenTarjetaCredito"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="53c81832-6c86-4d05-8225-74b124c5673f">
+            <interfaceMoniker
+              Id="2939bb9f-a136-49de-a8ca-8c06c4b37eeb"
+              LastKnownName="IServicioPagos"
+              LastKnownLocation="Modelo.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="5d9df096-737a-4703-9bcd-deba74b8575f"
+            isSubstitutable="false">
+            <classMoniker
+              Id="81f9fe8b-5b94-4c21-b249-607a8b4cc9d5"
+              LastKnownName="Orden"
+              LastKnownLocation="Modelo.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="48b5f2d0-de3c-453b-bc36-5002b7982c48"
+            name="ConfirmarCompra"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bbe432f7-7128-4224-9e07-134efbb0ee3e"
+        name="OrdenEfectivo"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="51948e05-aa98-449d-9183-c46a0489880b"
+            isSubstitutable="false">
+            <classMoniker
+              Id="81f9fe8b-5b94-4c21-b249-607a8b4cc9d5"
+              LastKnownName="Orden"
+              LastKnownLocation="Modelo.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e4fbbc58-a06a-45c9-83ad-67d2b216cb9c"
+            name="ConfirmarCompra"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b0ec7126-890f-4c08-bc57-0952711616dc"
+        LastKnownName="Cajero"
+        LastKnownLocation="Package_1638.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="c50888bb-ca50-458c-8a0a-ae1eb61b5181"
+        LastKnownName="Pagina Web"
+        LastKnownLocation="Package1_1638.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="e2aa77c1-4e7f-44f3-af9d-5db5929b948c"
+        name="IServicioNotificacion"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="eb228515-5132-4627-80f1-3a25397ab26c"
+        name="IReservaInventarios"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="2939bb9f-a136-49de-a8ca-8c06c4b37eeb"
+        name="IServicioPagos"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

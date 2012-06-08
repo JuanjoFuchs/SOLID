@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="8992c07f-d1cd-466b-aa4f-e719e78c5f14" name="Orden Una Sola Responsabilidad" linkedPackageId="555ef418-fdd1-4675-884e-e1d2a2353e04" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="14f048aa-9bfb-498e-a64a-7d12783f8e07">
+      <profileInstance Id="5229c04c-0d53-4244-bfb0-879596291d15" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="6dcd576d-eae2-45d0-851f-2959f7e27984">
+      <profileInstance Id="bcd55530-d39d-46b6-93f6-7cd4d3f490d4" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="55a8b6a6-eba3-4aff-99fe-c419ac0cf56b" name="Orden" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="81f9fe8b-5b94-4c21-b249-607a8b4cc9d5" />
+        <ownedAttributesInternal>
+          <property Id="929d8534-4ba4-49ae-a239-d5c819b87df4" name="Carrito" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c99819f2-d27c-452e-8c06-f571f4763137" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="c93637a2-9d45-4e53-836c-ee2e0b2e117d" name="ConfirmarCompra" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fb42c528-cc30-4f7e-b882-0469b1513e46" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8134c109-0671-476d-af06-2acee87b37dd" name="OrdenWeb" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b9bd986f-0024-4d8b-878c-6e077e1f3e5b" />
+        <suppliersInternal>
+          <dependency Id="190080ff-80b3-4e98-80fb-f81cb008a646">
+            <interfaceMoniker Id="9225408e-7cc2-4306-b854-bfb5d2682c03" LastKnownName="IServicioNotificacion" />
+            <elementDefinition Id="748e406b-e331-422c-a70a-b84cdb16acf6" />
+          </dependency>
+          <dependency Id="d5d0a632-947f-44ab-9bbe-99b5d8f4d101">
+            <interfaceMoniker Id="bef70eae-72f3-4577-a322-fc8bedd43d0e" LastKnownName="IReservaInventarios" />
+            <elementDefinition Id="2b1049b0-21dc-4b25-b442-9917b8ead5a3" />
+          </dependency>
+          <dependency Id="f8ebd188-34d6-4842-8bdd-37e444415101">
+            <interfaceMoniker Id="c229fbeb-ca37-4e5c-a9ba-9dd48fc8ff7a" LastKnownName="IServicioPagos" />
+            <elementDefinition Id="edb3b73f-fa2f-41b3-a3a3-c15b45b64d8d" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="2212f8c0-9e56-4861-aac3-d463bc238f81" isSubstitutable="false">
+            <classMoniker Id="55a8b6a6-eba3-4aff-99fe-c419ac0cf56b" LastKnownName="Orden" />
+            <elementDefinition Id="4861c254-b2c2-4cb4-98dc-c6640414c0a6" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="5545571e-9f9e-477f-a6b7-180ab806c63a" name="ConfirmarCompra" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="264fe671-793f-416f-943e-8c75b4413b3d" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="45b00f4e-97e8-418d-b9df-ff00da0cd7c7" name="OrdenTarjetaCredito" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="808147f3-b7a0-4daa-bb3a-11b60c8c6915" />
+        <suppliersInternal>
+          <dependency Id="effe9798-1165-4a6c-b6fe-cbde75cd205b">
+            <interfaceMoniker Id="c229fbeb-ca37-4e5c-a9ba-9dd48fc8ff7a" LastKnownName="IServicioPagos" />
+            <elementDefinition Id="53c81832-6c86-4d05-8225-74b124c5673f" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="064caa14-aade-4ec1-8ee1-901198cd780f" isSubstitutable="false">
+            <classMoniker Id="55a8b6a6-eba3-4aff-99fe-c419ac0cf56b" LastKnownName="Orden" />
+            <elementDefinition Id="5d9df096-737a-4703-9bcd-deba74b8575f" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="9aa02b3e-8efb-4341-8a52-0cfeb5f70eae" name="ConfirmarCompra" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="48b5f2d0-de3c-453b-bc36-5002b7982c48" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7e5bb5d1-3a9a-4330-b547-d2ab72b52343" name="OrdenEfectivo" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="bbe432f7-7128-4224-9e07-134efbb0ee3e" />
+        <generalsInternal>
+          <generalization Id="729c5c37-0119-4763-b84c-cc81be8c96ba" isSubstitutable="false">
+            <classMoniker Id="55a8b6a6-eba3-4aff-99fe-c419ac0cf56b" LastKnownName="Orden" />
+            <elementDefinition Id="51948e05-aa98-449d-9183-c46a0489880b" />
+          </generalization>
+        </generalsInternal>
+        <ownedOperationsInternal>
+          <operation Id="e5713e86-6a31-4850-9651-92db6c65898e" name="ConfirmarCompra" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e4fbbc58-a06a-45c9-83ad-67d2b216cb9c" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="aca4b19c-ac57-466f-8a16-d93bc7422560" name="Cajero">
+        <elementDefinition Id="b0ec7126-890f-4c08-bc57-0952711616dc" />
+        <suppliersInternal>
+          <dependency Id="e1574ccb-e5a7-495e-9492-219b9d770155">
+            <classMoniker Id="7e5bb5d1-3a9a-4330-b547-d2ab72b52343" LastKnownName="OrdenEfectivo" />
+            <elementDefinition Id="ca37c394-819b-43c0-ad47-0b44d56efd2d" />
+          </dependency>
+          <dependency Id="ae9ff9b4-e3e7-4945-a1f5-b83b480c06a6">
+            <classMoniker Id="45b00f4e-97e8-418d-b9df-ff00da0cd7c7" LastKnownName="OrdenTarjetaCredito" />
+            <elementDefinition Id="a014df50-c8db-40aa-aa61-1e5453247a4c" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="75753362-842c-4281-8008-6e220ccdc47b" name="Pagina Web">
+        <elementDefinition Id="c50888bb-ca50-458c-8a0a-ae1eb61b5181" />
+        <suppliersInternal>
+          <dependency Id="98d9c9aa-be91-4616-8cab-ca7b8cd9ec8c">
+            <classMoniker Id="8134c109-0671-476d-af06-2acee87b37dd" LastKnownName="OrdenWeb" />
+            <elementDefinition Id="e2578956-cd4a-42b2-9f6b-6a1938a10677" />
+          </dependency>
+        </suppliersInternal>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="9225408e-7cc2-4306-b854-bfb5d2682c03" name="IServicioNotificacion" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e2aa77c1-4e7f-44f3-af9d-5db5929b948c" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="bef70eae-72f3-4577-a322-fc8bedd43d0e" name="IReservaInventarios" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="eb228515-5132-4627-80f1-3a25397ab26c" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="c229fbeb-ca37-4e5c-a9ba-9dd48fc8ff7a" name="IServicioPagos" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2939bb9f-a136-49de-a8ca-8c06c4b37eeb" />
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="555ef418-fdd1-4675-884e-e1d2a2353e04" name="Modelo">
+    <elementDefinition Id="c76151c7-9295-48cf-b3f1-59cdacba3aa3" />
+  </package>
+</logicalClassDesignerModel>
